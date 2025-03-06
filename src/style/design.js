@@ -12,7 +12,7 @@ const design = StyleSheet.create({
     },
     subHeading:{
         fontSize:scale(15),
-        fontFamily:theme.Fonts.light,
+        fontFamily:theme.Fonts.regular,
         color:theme.color.textColor
     },
 })
