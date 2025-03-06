@@ -22,7 +22,7 @@ const InfoScreen = () => {
     return (
         <View style={styles.container}>
             <View style={styles.headerContainer}>
-                <TouchableOpacity onPress={() => navigation.goBack()} style={styles.headerIconContainer}>
+                <TouchableOpacity onPress={() => navigation.navigate("Home")} style={styles.headerIconContainer}>
                     <Ionicons
                         name="chevron-back"
                         size={scale(25)}

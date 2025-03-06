@@ -13,6 +13,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import {scale} from 'react-native-size-matters';
 import {useNavigation} from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { ScrollView } from 'react-native-gesture-handler';
 
 const {height, width} = Dimensions.get('window');
 
@@ -129,7 +130,7 @@ const ViewNote = ({route}) => {
       </View>
       <Pressable onPress={toggleEditMode} style={styles.subContainer}>
         {iseditAble ? (
-          <View style={styles.subContainer}>
+          <ScrollView style={styles.subContainer} showsVerticalScrollIndicator={false}>
             <Text style={styles.date}>{note.createdAt}</Text>
 
             <TextInput
@@ -148,14 +149,14 @@ const ViewNote = ({route}) => {
               onChangeText={val => setDescription(val)}
               value={Description}
             />
-          </View>
+          </ScrollView>
         ) : (
-          <View style={styles.subContainer}>
+          <ScrollView style={styles.subContainer} showsVerticalScrollIndicator={false}>
             <Text style={styles.date}>{note.createdAt}</Text>
 
             <Text style={styles.title}>{note.title}</Text>
             <Text style={styles.description}>{note.Description}</Text>
-          </View>
+          </ScrollView>
         )}
       </Pressable>
     </View>

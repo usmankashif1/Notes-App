@@ -41,7 +41,7 @@ const StackNavigation = () => {
             <Stack.Screen
               name="InfoScreen"
               component={InfoScreen}
-              options={{headerShown: false,animation:'slide_from_right'}}
+              options={{headerShown: false,animation:'slide_from_left'}}
             />
             <Stack.Screen
               name="ViewNote"
