@@ -36,7 +36,7 @@ const Home = () => {
     setModalVisible(!modalVisible);
   };
 
-  const DeleteModal = (noteId) => {
+  const DeleteModal = noteId => {
     setNoteToDelete(noteId);
     setModalVisibleDelete(!modalVisibleDelete);
   };
@@ -82,9 +82,11 @@ const Home = () => {
 
   const navigation = useNavigation();
 
-  const rightSwipe = (item) => {
+  const rightSwipe = item => {
     return (
-      <TouchableOpacity style={styles.rightSwipeStyle} onPress={() => DeleteModal(item.id)}>
+      <TouchableOpacity
+        style={styles.rightSwipeStyle}
+        onPress={() => DeleteModal(item.id)}>
         <MaterialCommunityIcons name="delete" size={25} color="white" />
       </TouchableOpacity>
     );
@@ -253,11 +255,7 @@ const Home = () => {
               <TouchableOpacity
                 style={{left: 110, bottom: 5}}
                 onPress={() => setModalVisibleDelete(false)}>
-                <Entypo
-                  name="circle-with-cross"
-                  size={scale(35)}
-                  color="red"
-                />
+                <Entypo name="circle-with-cross" size={scale(35)} color="red" />
               </TouchableOpacity>
             </View>
 
